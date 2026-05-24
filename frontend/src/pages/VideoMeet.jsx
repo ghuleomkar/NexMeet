@@ -12,7 +12,8 @@ import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
 import ChatIcon from '@mui/icons-material/Chat'
 import server from '../environment';
-; 
+
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const server_url = server;
@@ -42,7 +43,7 @@ export default function VideoMeetComponent() {
 
     let [screen, setScreen] = useState();
 
-    let [showModal, setModal] = useState(true);
+    let [showModal, setModal] = useState(false);
 
     let [screenAvailable, setScreenAvailable] = useState();
 
@@ -407,6 +408,7 @@ export default function VideoMeetComponent() {
             getDislayMedia();
         }
     }, [screen])
+
     let handleScreen = () => {
         setScreen(!screen);
     }
@@ -524,6 +526,13 @@ let connect = () => {
 
                         <div className={styles.chatContainer}>
                             <h1>Chat</h1>
+                            
+                            {/* X symbol chatbox */}
+                            <div classname={styles.chatHeader}>
+                            <IconButton onClick={closeChat}>
+                            <CloseIcon style={{ color: "white" }} />
+                          </IconButton>
+                          </div>
 
                             <div className={styles.chattingDisplay}>
 
@@ -541,15 +550,14 @@ let connect = () => {
                   isMe ? styles.myMessage : ""
                 }`}
             >
-              {item.message}
+                    {item.message}
                                             
-                                        </div>
-                                        </div>
-                                    )
-                                }) : <p>No Messages Yet</p>}
-
-
-                            </div>
+                    </div>
+                </div>
+            )
+            }) : <p>No Messages Yet</p>}
+            
+         </div>
 
                             <div className={styles.chattingArea}>
                                 <TextField value={message} onChange={(e) => setMessage(e.target.value)} id="outlined-basic" label="Enter Your chat" variant="outlined" />

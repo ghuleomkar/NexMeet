@@ -27,6 +27,19 @@ export default function Authentication() {
   const { handleRegister, handleLogin } = React.useContext(AuthContext);
 
   const handleAuth = async () => {
+
+    if(formState === 1 && !name.trim()){
+      setError("Name is required");
+      return;
+    }
+    if(!username.trim()){
+      setError("Username is required");
+      return;
+    }
+    if(!password.trim()){
+      setError("Password is required")
+    }
+  
     try {
       setLoading(true);
 
@@ -125,6 +138,8 @@ export default function Authentication() {
                 id="username"
                 label="Username"
                 value={username}
+                error={!username && error.includes("Username")}
+                helperText={!username && error.includes("Username") ? error : ""}
                 onChange={(e) => setUsername(e.target.value)}
               />
 

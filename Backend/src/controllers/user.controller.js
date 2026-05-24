@@ -4,6 +4,9 @@ import { Meeting } from "../models/meeting.model.js";
 import bcrypt, { hash } from "bcrypt";
 import crypto from "crypto";
 
+
+
+//Login
 const login = async (req, res) => {
   const { username, password } = req.body;
 
@@ -35,9 +38,23 @@ const login = async (req, res) => {
   }
 };
 
+
+
+// register
 const register = async (req, res) => {
   console.log(req.body);
   const { name, username, password } = req.body;
+
+  if (
+    !name || !username || !password ||
+    name.trim() === "" ||
+    username.trim() === "" ||
+    password.trim() === ""
+  ) {
+    return res.status(400).json({
+      message: "All fields are required",
+    });
+  }
 
   try {
     const existingUser = await User.findOne({ username });
@@ -80,6 +97,8 @@ const getUserHistory = async (req,res) =>{
   }
 }
 
+
+// Histroy
 const addToHistory = async (req,res) =>{
   const {token , meeting_code} = req.body;
 
