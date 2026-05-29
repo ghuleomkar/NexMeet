@@ -396,11 +396,9 @@ export default function VideoMeetComponent() {
 
     let handleVideo = () => {
         setVideo(!video);
-        // getUserMedia();
     }
     let handleAudio = () => {
         setAudio(!audio)
-        // getUserMedia();
     }
 
     useEffect(() => {
@@ -449,7 +447,6 @@ let sendMessage = () => {
         message,
         sender: username
     });
-    // addMessage(message,username);
     setMessage("");
 };
 
@@ -468,8 +465,6 @@ let connect = () => {
     getMedia();
   }, 2000);
 };
-
-
 
 
     return (
@@ -515,10 +510,8 @@ let connect = () => {
 
   </div>
 </div>
-                
-                
+                            
                 :
-
 
                 <div className={styles.meetVideoContainer}>
 
@@ -538,8 +531,6 @@ let connect = () => {
 
                                 {messages.length !== 0 ? messages.map((item, index) => {
                                     const isMe = item.sender === username;
-
-
                                     
                                     return (
                                         <div key={index}>
@@ -550,10 +541,9 @@ let connect = () => {
                   isMe ? styles.myMessage : ""
                 }`}
             >
-                    {item.message}
-                                            
-                    </div>
-                </div>
+                {item.message}                                            
+            </div>
+        </div>
             )
             }) : <p>No Messages Yet</p>}
             

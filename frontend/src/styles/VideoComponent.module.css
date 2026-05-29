@@ -1,18 +1,8 @@
 .meetVideoContainer {
     position: relative;
     height: 100vh;
-    /* background: rgb(1, 4, 48); */
     background: linear-gradient(to bottom, #0f172a, #020617);
 }
-
-/* .meetUserVideo {
-    position: absolute;
-    bottom: 80px;
-    right:20px;
-    height: 120px;
-    width: auto;
-    border-radius: 12px;
-} */
 
 .buttonContainers {
     position: absolute;
@@ -135,6 +125,7 @@
   height: 100%;
   width: 320px;
   background: #111827;
+  
   display: flex;
   flex-direction: column;
   border-left: 1px solid #1f2937;
@@ -168,7 +159,7 @@
   padding-bottom: 8px;
 } 
 
-/* 📩 Messages area */
+/* Messages area */
 .chattingDisplay {
   flex: 1;
   overflow-y: auto;
@@ -177,14 +168,14 @@
   scroll-behavior: smooth;
 }
 
-/* 🧑 Sender Name */
+/* Sender Name */
 .chatSender {
   font-size: 12px;
   color: #9ca3af;
   margin-bottom: 2px;
 } 
 
-/* 💬 Message bubble */
+/* Message bubble */
  .chatMessage {
   background: #1f2937;
   color: white;
@@ -195,7 +186,7 @@
   word-wrap: break-word;
 } 
 
-/* 👤 My message */
+/* My message */
 .myMessage {
   background: #2563eb;
   margin-left: auto;
@@ -203,7 +194,7 @@
 }
 
 
-/* 📥 Input area */
+/* Input area */
 .chattingArea {
   position: sticky;
   bottom: 0;
@@ -344,7 +335,7 @@
 .meetUserVideo {
   position: absolute;
   bottom: 100px;
-  right: 20px;
+  left: 20px;
 
   width: 220px;
   height: 140px;
