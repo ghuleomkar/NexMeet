@@ -95,14 +95,11 @@ http://localhost:3000
 ---
 
 ## 🔮 Future Enhancements
-
-- Screen sharing  
+ 
 - Meeting recording  
-- Chat functionality  
 - Host controls & moderation  
 - Waiting rooms  
-- Authentication system  
-- Multi-user group calls optimization  
+- Multi-user group calls optimization 
 
 ---
 
