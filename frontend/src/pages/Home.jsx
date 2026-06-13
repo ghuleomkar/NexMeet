@@ -5,6 +5,7 @@ import "../App.css";
 import { Button, IconButton, TextField } from "@mui/material";
 import RestoreIcon from "@mui/icons-material/Restore";
 import { AuthContext } from "../contexts/AuthContext";
+import Footer from "./Footer";
 
 function HomeComponent() {
   let navigate = useNavigate();
@@ -20,7 +21,7 @@ function HomeComponent() {
 <>
   <div className="navBar">
   <div className="logoSection">
-    <h2>NexMeet</h2>
+    <h2 className="logo">Nex<span>Meet</span></h2>
   </div>
 
   <div className="navActions">
@@ -64,12 +65,18 @@ function HomeComponent() {
         </Button>
       </div>
     </div>
+
   </div>
 
   <div className="rightPanel">
     <img src="/logo3.png" alt="meeting" />
   </div>
 </div>
+
+  <>
+
+   <Footer />
+</> 
     </>
   );
 }

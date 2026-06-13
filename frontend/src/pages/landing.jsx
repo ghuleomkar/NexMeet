@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 export default function LandingPage() {
   const router = useNavigate();
@@ -10,7 +11,7 @@ export default function LandingPage() {
       
       {/* Navbar */}
       <nav className="navbar">
-        <h2 className="logo">NexMeet</h2>
+        <h2 className="logo">Nex<span>Meet</span></h2>
 
         <div className="navlist">
           <p onClick={() => router("/aljk23")}>Join as Guest</p>
@@ -74,6 +75,11 @@ export default function LandingPage() {
           <img src="/mobile.png" alt="video call" />
         </div>
       </div>
+      <>
+   <Footer />
+</>
+
     </div>
+    
   );
 }

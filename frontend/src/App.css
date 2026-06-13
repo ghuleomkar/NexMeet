@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  /* background: #1a1a2e; */
+  background: radial-gradient(circle at 80% 20%,#1a1a2e, #000 );
+}
 /* front landing page */
 /* MAIN CONTAINER */
  .landingPageContainer {
@@ -22,6 +29,11 @@
 .logo {
   font-size: 1.8rem;
   font-weight: 600;
+  color:white;
+}
+.logo span {
+  color: #ff8c1a;
+  text-shadow: 0 0 10px rgba(255, 140, 26, 0.4);
 }
 
 /* join , register login */
@@ -147,6 +159,7 @@
 
 
 /* Features card HD secure & fast card */
+
 .features {
   display: flex;
   justify-content: center;
@@ -168,14 +181,15 @@
 } 
 
 
-.featureCard:hover {
-  transform: translateY(-10px);
-  border: 1px solid #ff9839;
+.featureCard:hover{
+    transform:translateY(-6px);
+    border:1px solid #ff8c1a;
+    box-shadow:0 0 20px rgba(255,140,26,0.2);
 }
 
 .featureCard h3 {
   margin-bottom: 0.5rem;
-  color: #ff9839;
+  color: #ff8c1a;
 }
 
 .featureCard p {
@@ -270,7 +284,7 @@
 
 /* MAIN CONTAINER */
 .meetContainer {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -527,6 +541,18 @@
     gap: 1rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
