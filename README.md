@@ -13,7 +13,7 @@ A real-time video conferencing web application that enables seamless peer-to-pee
 ## 🛠 Tech Stack
 
 **Frontend:** React.js, CSS3, Material UI (MUI)  
-**Backend:** Node.js, Express.js  
+**Backend:** Node.js, Express.js, MongoDB 
 **Real-Time Communication:** WebRTC, Socket.io  
 **Architecture:** Peer-to-Peer (P2P) Media Streaming  
 **Other Technologies:** WebSockets, MediaDevices API  
